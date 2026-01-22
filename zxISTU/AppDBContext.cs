@@ -11,12 +11,12 @@ namespace DAL
     public class AppDBContext : DbContext
     {
 
-        DbSet<EmployeeEntity> employeeEntities {  get; set; }
-        DbSet<InstructionDocumentEntity> instructionDocumentEntities { get; set; }
-        DbSet<InstructionProgramEntity> instructionProgramEntities { get; set; }
-        DbSet<InstructionScheduleEntity> instructionScheduleEntities { get; set; }
-        DbSet<InstructionsEntity> instructionsEntities { get; set; }
-        DbSet<InstructionTypeEntity> instructionTypeEntities { get; set; }
+        public DbSet<EmployeeEntity> employeeEntities {  get; set; }
+        public DbSet<InstructionDocumentEntity> instructionDocumentEntities { get; set; }
+        public DbSet<InstructionProgramEntity> instructionProgramEntities { get; set; }
+        public DbSet<InstructionScheduleEntity> instructionScheduleEntities { get; set; }
+        public DbSet<InstructionsEntity> instructionsEntities { get; set; }
+        public DbSet<InstructionTypeEntity> instructionTypeEntities { get; set; }
 
         public AppDBContext(DbContextOptions options) : base(options)
         {

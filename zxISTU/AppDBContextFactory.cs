@@ -13,7 +13,7 @@ namespace DAL
         public AppDBContext CreateDbContext(string[] args)
         {
             var optionsBuilder = new DbContextOptionsBuilder<AppDBContext>();
-            var connectionString = "";
+            var connectionString = "User id=postgres; port=5432; host=localhost; database=zxISTU; password=root;";
             optionsBuilder.UseNpgsql(connectionString);
 
             return new AppDBContext(optionsBuilder.Options);

@@ -17,7 +17,7 @@ namespace Domain.Entities
         [Required]
         public DateTime InstructionDate { get; set; } = DateTime.Now;
 
-        public DateTime? NextInstructionDate { get; set; }
+        public DateTime NextInstructionDate { get; set; }
 
         [Required]
         [MaxLength(20)]
@@ -38,13 +38,13 @@ namespace Domain.Entities
 
 
 
-        public EmployeeEntity Employee { get; set; } = null!;
+        public EmployeeEntity? Employee { get; set; } = null!;
 
         [ForeignKey("ProgramId")]
         [Required]
         public int ProgramId { get; set; }
         
-        public InstructionProgramEntity Program { get; set; } = null!;
+        public InstructionProgramEntity? Program { get; set; } = null!;
 
         public List<InstructionDocumentEntity> Documents { get; set; } = new();
     }
